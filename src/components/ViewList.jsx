@@ -1,9 +1,16 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
+import Header from './Header';
+import List from './List';
 
 export default class ViewList extends Component {
   render() {
+    const { data, newUser, handleClick } = this.props;
+
     return (
-      'Lista de usuarios'
+      <div>
+        <Header newUser={newUser} />
+        <List data={data} handleClick={handleClick} />
+      </div>
     );
   }
 }
